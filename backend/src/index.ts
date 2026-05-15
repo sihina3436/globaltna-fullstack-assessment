@@ -1,0 +1,28 @@
+import express, { Application } from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import connectDB from "./config/db";
+import jobRoutes from "./routes/job.routes";
+import { errorHandler, notFound } from "./middleware/errorHandler";
+
+dotenv.config();
+
+const app: Application = express();
+const PORT = process.env.PORT || 5000;
+
+app.use(cors({ origin: "http://localhost:3000" }));
+app.use(express.json());
+
+// Routes
+app.use("/api/jobs", jobRoutes);
+
+// Error handling
+app.use(notFound);
+app.use(errorHandler);
+
+// Start
+connectDB().then(() => {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+});
