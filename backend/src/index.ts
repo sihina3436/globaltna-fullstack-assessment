@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import connectDB from "./config/db";
 import jobRoutes from "./routes/job.routes";
+import authRoutes from "./routes/auth.routes";
 import { errorHandler, notFound } from "./middleware/errorHandler";
 
 dotenv.config();
@@ -15,6 +16,7 @@ app.use(express.json());
 
 // Routes
 app.use("/api/jobs", jobRoutes);
+app.use("/api/auth", authRoutes);
 
 // Error handling
 app.use(notFound);
