@@ -3,10 +3,12 @@ import jwt from "jsonwebtoken";
 import User from "../models/User.model";
 
 //  Generate JWT token using user id
-const signToken = (id: string) =>
-  jwt.sign({ id }, process.env.JWT_SECRET as string, {
-    expiresIn: process.env.JWT_EXPIRES_IN || "7d",
-  });
+const signToken = (id: string) => {
+  const secret = process.env.JWT_SECRET as string;
+  const expiresIn = (process.env.JWT_EXPIRES_IN || "7d") as jwt.SignOptions["expiresIn"];
+
+  return jwt.sign({ id }, secret, { expiresIn });
+};
 
 // POST /api/auth/register
 // Register a new user
