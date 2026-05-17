@@ -11,7 +11,7 @@ dotenv.config();
 const app: Application = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors({ origin: "https://globaltna-fullstack-assessment-iun4.vercel.app" }));
 app.use(express.json());
 
 // Routes

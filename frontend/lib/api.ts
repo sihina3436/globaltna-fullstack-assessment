@@ -2,7 +2,7 @@ import axios from "axios";
 import { getToken } from "./auth";
 import { Job, CreateJobDto, JobStatus, ApiResponse } from "@/types/job";
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://globaltna-fullstack-assessment.vercel.app/";
 
 const api = axios.create({ baseURL: BASE_URL });
 
