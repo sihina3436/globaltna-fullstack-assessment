@@ -4,7 +4,7 @@ import { AppHeader } from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "GlobalTNA — Service Request Board",
-  description: "Browse and post home service requests across the UK",
+  description: "Browse and post home service requests ",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

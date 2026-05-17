@@ -145,7 +145,7 @@ export default function JobForm() {
             type="text"
             value={form.location}
             onChange={(e) => set("location", e.target.value)}
-            placeholder="e.g. Glasgow"
+            placeholder="e.g. Matara"
             className={inputClass(false)}
           />
         </FormField>

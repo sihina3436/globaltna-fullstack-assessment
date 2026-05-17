@@ -1,5 +1,4 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { CalendarDays, Mail, MapPin, Trash2, User } from "lucide-react";
 import { Job, JobStatus } from "@/types/job";

@@ -76,7 +76,7 @@ export default function HomePage() {
         </h1>
         {/* Page description */}
         <p className="text-sm text-gray-500 mt-2">
-          Browse jobs or post a new request for tradespeople.
+          Browse jobs or post a new request
         </p>
       </div>
 
