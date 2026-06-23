@@ -1,6 +1,6 @@
-# GlobalTNA — Service Request Board
+# Service Request Board - NEXT.js
 
-A full-stack web application where homeowners can post service requests and tradespeople can browse, filter, and manage them. Built as part of the GlobalTNA Full-Stack Developer Intern technical assessment.
+A full-stack web application where homeowners can post service requests and tradespeople can browse, filter, and manage them.
 
 ---
 
